@@ -12,6 +12,7 @@
 		CDE2FDF92BF834590031D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE2FDF72BF834590031D8CE /* Main.storyboard */; };
 		CDE2FDFB2BF8345A0031D8CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE2FDFA2BF8345A0031D8CE /* Assets.xcassets */; };
 		CDE2FDFE2BF8345A0031D8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE2FDFC2BF8345A0031D8CE /* LaunchScreen.storyboard */; };
+		CDE2FE2B2BF83B700031D8CE /* MagicCardsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE2A2BF83B700031D8CE /* MagicCardsUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		CDE2FDFD2BF8345A0031D8CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDE2FDFF2BF8345A0031D8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE2FE042BF8345A0031D8CE /* MagicTheGatheringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicTheGatheringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE2FE2A2BF83B700031D8CE /* MagicCardsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		CDE2FE072BF8345A0031D8CE /* MagicTheGatheringTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDE2FE282BF83B3E0031D8CE /* Sources */,
 			);
 			path = MagicTheGatheringTests;
 			sourceTree = "<group>";
@@ -147,6 +150,22 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		CDE2FE282BF83B3E0031D8CE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE292BF83B470031D8CE /* Domain */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CDE2FE292BF83B470031D8CE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE2A2BF83B700031D8CE /* MagicCardsUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +219,7 @@
 					};
 					CDE2FE032BF8345A0031D8CE = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = CDE2FDED2BF834590031D8CE;
 					};
 				};
@@ -257,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE2FE2B2BF83B700031D8CE /* MagicCardsUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +491,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 52PJAVGKPQ;
@@ -479,6 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.drsoft.MagicTheGatheringTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicTheGathering.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MagicTheGathering";
@@ -490,6 +513,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 52PJAVGKPQ;
