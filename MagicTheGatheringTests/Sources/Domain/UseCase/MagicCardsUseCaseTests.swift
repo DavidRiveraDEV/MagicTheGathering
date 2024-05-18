@@ -1,6 +1,7 @@
 
 import Foundation
 import XCTest
+@testable import MagicTheGathering
 
 final class MagicCardsUseCaseTests: XCTestCase {
 
@@ -13,7 +14,7 @@ final class MagicCardsUseCaseTests: XCTestCase {
             _ = try await sut.fetchCards()
             XCTFail("Expected connection error")
         } catch {
-            XCTAssertEqual(error as? CardsUseCaseError, .connection)
+            XCTAssertEqual(error as? CardsError, .connection)
         }
     }
 
@@ -26,7 +27,7 @@ final class MagicCardsUseCaseTests: XCTestCase {
             _ = try await sut.fetchCards()
             XCTFail("Expected connection error")
         } catch {
-            XCTAssertEqual(error as? CardsUseCaseError, .unknown)
+            XCTAssertEqual(error as? CardsError, .unknown)
         }
     }
 
@@ -53,60 +54,5 @@ final class MagicCardsUseCaseTests: XCTestCase {
         }
 
         return sut
-    }
-}
-
-// impl
-
-struct Card: Equatable {
-
-    let id: String
-    let name: String
-    let type: String
-    let text: String
-    let imageUrl: String?
-}
-
-protocol CardsRepository {
-
-    func fetchCards() async throws -> [Card]
-}
-
-protocol CardsUseCase {
-
-    func fetchCards() async throws -> [Card]
-}
-
-final class MagicCardsUseCase: CardsUseCase {
-
-    private let repository: CardsRepository
-
-    init(repository: CardsRepository) {
-        self.repository = repository
-    }
-
-    func fetchCards() async throws -> [Card] {
-        try await repository.fetchCards()
-    }
-}
-
-enum CardsUseCaseError: Error {
-    case connection
-    case unknown
-}
-
-
-// doubles
-
-final class CardsRepositoryStub: CardsRepository {
-
-    var error: CardsUseCaseError?
-    var cards: [Card]?
-
-    func fetchCards() async throws -> [Card] {
-        guard let cards else {
-            throw error ?? .unknown
-        }
-        return cards
     }
 }
