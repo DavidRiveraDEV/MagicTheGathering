@@ -25,7 +25,7 @@ final class MagicCardsUseCaseTests: XCTestCase {
 
         do {
             _ = try await sut.fetchCards()
-            XCTFail("Expected connection error")
+            XCTFail("Expected unknown error")
         } catch {
             XCTAssertEqual(error as? CardsError, .unknown)
         }

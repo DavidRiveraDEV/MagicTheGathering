@@ -19,6 +19,13 @@
 		CDE2FE362BF844E70031D8CE /* MagicCardsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE352BF844E70031D8CE /* MagicCardsUseCase.swift */; };
 		CDE2FE382BF8451E0031D8CE /* CardsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE372BF8451E0031D8CE /* CardsError.swift */; };
 		CDE2FE3C2BF845820031D8CE /* CardsRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE3B2BF845820031D8CE /* CardsRepositoryStub.swift */; };
+		CDE2FE412BFA724A0031D8CE /* RemoteCardsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE402BFA724A0031D8CE /* RemoteCardsRepositoryTests.swift */; };
+		CDE2FE462BFA88E30031D8CE /* CardsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE452BFA88E30031D8CE /* CardsAPI.swift */; };
+		CDE2FE482BFA88F60031D8CE /* MagicCardsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE472BFA88F60031D8CE /* MagicCardsAPI.swift */; };
+		CDE2FE4A2BFA890D0031D8CE /* RemoteCardsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE492BFA890D0031D8CE /* RemoteCardsRepository.swift */; };
+		CDE2FE4D2BFA89E10031D8CE /* MagicCardsAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE4C2BFA89E10031D8CE /* MagicCardsAPIStub.swift */; };
+		CDE2FE4F2BFA8A220031D8CE /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE4E2BFA8A220031D8CE /* URLSessionStub.swift */; };
+		CDE2FE522BFB90FC0031D8CE /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE512BFB90FC0031D8CE /* URLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		CDE2FE352BF844E70031D8CE /* MagicCardsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsUseCase.swift; sourceTree = "<group>"; };
 		CDE2FE372BF8451E0031D8CE /* CardsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsError.swift; sourceTree = "<group>"; };
 		CDE2FE3B2BF845820031D8CE /* CardsRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRepositoryStub.swift; sourceTree = "<group>"; };
+		CDE2FE402BFA724A0031D8CE /* RemoteCardsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCardsRepositoryTests.swift; sourceTree = "<group>"; };
+		CDE2FE452BFA88E30031D8CE /* CardsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsAPI.swift; sourceTree = "<group>"; };
+		CDE2FE472BFA88F60031D8CE /* MagicCardsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsAPI.swift; sourceTree = "<group>"; };
+		CDE2FE492BFA890D0031D8CE /* RemoteCardsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCardsRepository.swift; sourceTree = "<group>"; };
+		CDE2FE4C2BFA89E10031D8CE /* MagicCardsAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsAPIStub.swift; sourceTree = "<group>"; };
+		CDE2FE4E2BFA8A220031D8CE /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
+		CDE2FE512BFB90FC0031D8CE /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +167,7 @@
 		CDE2FE262BF838B40031D8CE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CDE2FE422BFA88BC0031D8CE /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -168,6 +183,7 @@
 		CDE2FE282BF83B3E0031D8CE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CDE2FE3D2BFA713A0031D8CE /* Data */,
 				CDE2FE292BF83B470031D8CE /* Domain */,
 			);
 			path = Sources;
@@ -222,6 +238,75 @@
 				CDE2FE3B2BF845820031D8CE /* CardsRepositoryStub.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		CDE2FE3D2BFA713A0031D8CE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE3E2BFA72230031D8CE /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CDE2FE3E2BFA72230031D8CE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE3F2BFA722A0031D8CE /* Remote */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CDE2FE3F2BFA722A0031D8CE /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE4B2BFA89DA0031D8CE /* API */,
+				CDE2FE402BFA724A0031D8CE /* RemoteCardsRepositoryTests.swift */,
+				CDE2FE4E2BFA8A220031D8CE /* URLSessionStub.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		CDE2FE422BFA88BC0031D8CE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE432BFA88C70031D8CE /* Remote */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CDE2FE432BFA88C70031D8CE /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE502BFB90BF0031D8CE /* URLSession */,
+				CDE2FE442BFA88DA0031D8CE /* API */,
+				CDE2FE492BFA890D0031D8CE /* RemoteCardsRepository.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		CDE2FE442BFA88DA0031D8CE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE452BFA88E30031D8CE /* CardsAPI.swift */,
+				CDE2FE472BFA88F60031D8CE /* MagicCardsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CDE2FE4B2BFA89DA0031D8CE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE4C2BFA89E10031D8CE /* MagicCardsAPIStub.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CDE2FE502BFB90BF0031D8CE /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE512BFB90FC0031D8CE /* URLSession.swift */,
+			);
+			path = URLSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,11 +411,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE2FE462BFA88E30031D8CE /* CardsAPI.swift in Sources */,
 				CDE2FE382BF8451E0031D8CE /* CardsError.swift in Sources */,
+				CDE2FE522BFB90FC0031D8CE /* URLSession.swift in Sources */,
 				CDE2FE342BF844D20031D8CE /* CardsUseCase.swift in Sources */,
 				CDE2FDF22BF834590031D8CE /* AppDelegate.swift in Sources */,
 				CDE2FE302BF844A30031D8CE /* CardsRepository.swift in Sources */,
+				CDE2FE482BFA88F60031D8CE /* MagicCardsAPI.swift in Sources */,
 				CDE2FE362BF844E70031D8CE /* MagicCardsUseCase.swift in Sources */,
+				CDE2FE4A2BFA890D0031D8CE /* RemoteCardsRepository.swift in Sources */,
 				CDE2FE2E2BF8448F0031D8CE /* Card.swift in Sources */,
 				CDE2FDF42BF834590031D8CE /* SceneDelegate.swift in Sources */,
 			);
@@ -340,8 +429,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE2FE4F2BFA8A220031D8CE /* URLSessionStub.swift in Sources */,
+				CDE2FE4D2BFA89E10031D8CE /* MagicCardsAPIStub.swift in Sources */,
 				CDE2FE2B2BF83B700031D8CE /* MagicCardsUseCaseTests.swift in Sources */,
 				CDE2FE3C2BF845820031D8CE /* CardsRepositoryStub.swift in Sources */,
+				CDE2FE412BFA724A0031D8CE /* RemoteCardsRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

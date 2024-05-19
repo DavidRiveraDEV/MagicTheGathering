@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct Card: Equatable {
+struct Card: Equatable, Decodable {
 
     let id: String
     let name: String
