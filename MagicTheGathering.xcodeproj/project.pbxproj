@@ -26,6 +26,11 @@
 		CDE2FE4D2BFA89E10031D8CE /* MagicCardsAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE4C2BFA89E10031D8CE /* MagicCardsAPIStub.swift */; };
 		CDE2FE4F2BFA8A220031D8CE /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE4E2BFA8A220031D8CE /* URLSessionStub.swift */; };
 		CDE2FE522BFB90FC0031D8CE /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE512BFB90FC0031D8CE /* URLSession.swift */; };
+		CDE2FE542BFBA7F00031D8CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE532BFBA7F00031D8CE /* MainViewController.swift */; };
+		CDE2FE582BFBAAC60031D8CE /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE572BFBAAC60031D8CE /* MainViewControllerTests.swift */; };
+		CDE2FE5B2BFBB10C0031D8CE /* CardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE5A2BFBB10C0031D8CE /* CardsRouter.swift */; };
+		CDE2FE5F2BFBB2A30031D8CE /* CardsRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */; };
+		CDE2FE612BFBB2F50031D8CE /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE602BFBB2F50031D8CE /* UIStoryboard+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		CDE2FE4C2BFA89E10031D8CE /* MagicCardsAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsAPIStub.swift; sourceTree = "<group>"; };
 		CDE2FE4E2BFA8A220031D8CE /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
 		CDE2FE512BFB90FC0031D8CE /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		CDE2FE532BFBA7F00031D8CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CDE2FE572BFBAAC60031D8CE /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		CDE2FE5A2BFBB10C0031D8CE /* CardsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRouter.swift; sourceTree = "<group>"; };
+		CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRouterSpy.swift; sourceTree = "<group>"; };
+		CDE2FE602BFBB2F50031D8CE /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE2FDF72BF834590031D8CE /* Main.storyboard */,
+				CDE2FE532BFBA7F00031D8CE /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -148,8 +159,9 @@
 		CDE2FE242BF838990031D8CE /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				CDE2FE272BF838C90031D8CE /* Assets */,
-				CDE2FE212BF837420031D8CE /* Main */,
+				CDE2FE632BFBB4970031D8CE /* Common */,
+				CDE2FE652BFBB4C30031D8CE /* Navigation */,
+				CDE2FE642BFBB4B40031D8CE /* Screen */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -185,6 +197,7 @@
 			children = (
 				CDE2FE3D2BFA713A0031D8CE /* Data */,
 				CDE2FE292BF83B470031D8CE /* Domain */,
+				CDE2FE552BFBAA9B0031D8CE /* Presentation */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -309,6 +322,72 @@
 			path = URLSession;
 			sourceTree = "<group>";
 		};
+		CDE2FE552BFBAA9B0031D8CE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE672BFBB5D50031D8CE /* Navigation */,
+				CDE2FE662BFBB5C50031D8CE /* Screen */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CDE2FE562BFBAAAF0031D8CE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE572BFBAAC60031D8CE /* MainViewControllerTests.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CDE2FE622BFBB30D0031D8CE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE602BFBB2F50031D8CE /* UIStoryboard+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CDE2FE632BFBB4970031D8CE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE272BF838C90031D8CE /* Assets */,
+				CDE2FE622BFBB30D0031D8CE /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CDE2FE642BFBB4B40031D8CE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE212BF837420031D8CE /* Main */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CDE2FE652BFBB4C30031D8CE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE5A2BFBB10C0031D8CE /* CardsRouter.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CDE2FE662BFBB5C50031D8CE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE562BFBAAAF0031D8CE /* Main */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CDE2FE672BFBB5D50031D8CE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,12 +490,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE2FE612BFBB2F50031D8CE /* UIStoryboard+Extension.swift in Sources */,
 				CDE2FE462BFA88E30031D8CE /* CardsAPI.swift in Sources */,
 				CDE2FE382BF8451E0031D8CE /* CardsError.swift in Sources */,
 				CDE2FE522BFB90FC0031D8CE /* URLSession.swift in Sources */,
+				CDE2FE542BFBA7F00031D8CE /* MainViewController.swift in Sources */,
 				CDE2FE342BF844D20031D8CE /* CardsUseCase.swift in Sources */,
 				CDE2FDF22BF834590031D8CE /* AppDelegate.swift in Sources */,
 				CDE2FE302BF844A30031D8CE /* CardsRepository.swift in Sources */,
+				CDE2FE5B2BFBB10C0031D8CE /* CardsRouter.swift in Sources */,
 				CDE2FE482BFA88F60031D8CE /* MagicCardsAPI.swift in Sources */,
 				CDE2FE362BF844E70031D8CE /* MagicCardsUseCase.swift in Sources */,
 				CDE2FE4A2BFA890D0031D8CE /* RemoteCardsRepository.swift in Sources */,
@@ -431,9 +513,11 @@
 			files = (
 				CDE2FE4F2BFA8A220031D8CE /* URLSessionStub.swift in Sources */,
 				CDE2FE4D2BFA89E10031D8CE /* MagicCardsAPIStub.swift in Sources */,
+				CDE2FE5F2BFBB2A30031D8CE /* CardsRouterSpy.swift in Sources */,
 				CDE2FE2B2BF83B700031D8CE /* MagicCardsUseCaseTests.swift in Sources */,
 				CDE2FE3C2BF845820031D8CE /* CardsRepositoryStub.swift in Sources */,
 				CDE2FE412BFA724A0031D8CE /* RemoteCardsRepositoryTests.swift in Sources */,
+				CDE2FE582BFBAAC60031D8CE /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,8 +683,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,8 +710,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
