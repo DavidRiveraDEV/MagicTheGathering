@@ -31,6 +31,7 @@
 		CDE2FE5B2BFBB10C0031D8CE /* CardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE5A2BFBB10C0031D8CE /* CardsRouter.swift */; };
 		CDE2FE5F2BFBB2A30031D8CE /* CardsRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */; };
 		CDE2FE612BFBB2F50031D8CE /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE602BFBB2F50031D8CE /* UIStoryboard+Extension.swift */; };
+		CDE2FE6A2BFCB8880031D8CE /* MagicCardsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE692BFCB8880031D8CE /* MagicCardsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CDE2FE5A2BFBB10C0031D8CE /* CardsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRouter.swift; sourceTree = "<group>"; };
 		CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRouterSpy.swift; sourceTree = "<group>"; };
 		CDE2FE602BFBB2F50031D8CE /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		CDE2FE692BFCB8880031D8CE /* MagicCardsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 		CDE2FE662BFBB5C50031D8CE /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				CDE2FE682BFCB8600031D8CE /* Cards */,
 				CDE2FE562BFBAAAF0031D8CE /* Main */,
 			);
 			path = Screen;
@@ -386,6 +389,14 @@
 				CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CDE2FE682BFCB8600031D8CE /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE692BFCB8880031D8CE /* MagicCardsViewModelTests.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +528,7 @@
 				CDE2FE2B2BF83B700031D8CE /* MagicCardsUseCaseTests.swift in Sources */,
 				CDE2FE3C2BF845820031D8CE /* CardsRepositoryStub.swift in Sources */,
 				CDE2FE412BFA724A0031D8CE /* RemoteCardsRepositoryTests.swift in Sources */,
+				CDE2FE6A2BFCB8880031D8CE /* MagicCardsViewModelTests.swift in Sources */,
 				CDE2FE582BFBAAC60031D8CE /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
