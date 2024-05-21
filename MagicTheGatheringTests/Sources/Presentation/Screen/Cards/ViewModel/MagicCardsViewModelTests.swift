@@ -1,6 +1,7 @@
 
 import Foundation
 import XCTest
+import Combine
 @testable import MagicTheGathering
 
 final class MagicCardsViewModelTests: XCTestCase {
@@ -107,83 +108,5 @@ final class MagicCardsViewModelTests: XCTestCase {
         }
 
         return sut
-    }
-}
-
-// IMPL
-
-protocol CardsViewModel {
-
-    func loadCards()
-}
-
-struct ErrorMessage: Equatable {
-    let title: String
-    let message: String
-}
-
-enum CardsViewState: Equatable {
-    case loading
-    case error(_ errorMessage: ErrorMessage)
-    case showingCards(_ cards: [Card])
-}
-
-import Combine
-
-final class MagicCardsViewModel: CardsViewModel {
-
-    @Published private(set) var state: CardsViewState
-
-    private let useCase: CardsUseCase
-
-    init(useCase: CardsUseCase) {
-        self.useCase = useCase
-        state = .showingCards([])
-    }
-
-    func loadCards() {
-        state = .loading
-        Task(priority: .userInitiated) {
-            do {
-                let cards = try await useCase.fetchCards()
-                state = .showingCards(cards)
-            } catch {
-                handle(error: error)
-            }
-        }
-    }
-
-    private func handle(error: Error) {
-        let error = error as? CardsError ?? .unknown
-        let errorMessage = getErrorMessage(from: error)
-        state = .error(errorMessage)
-    }
-
-    private func getErrorMessage(from error: CardsError) -> ErrorMessage {
-        return switch error {
-        case .connection: .init(title: "Error", message: "Please check your internet connection and try again.")
-        case .unknown: .init(title: "Error", message: "Unexpected error has occurred. Please try again.")
-        }
-    }
-}
-
-
-// Doubles
-
-struct CardsUseCaseDummy: CardsUseCase {
-
-    func fetchCards() async throws -> [Card] { [] }
-}
-
-final class CardsUseCaseStub: CardsUseCase {
-
-    var error: Error?
-    var cards: [Card]?
-
-    func fetchCards() async throws -> [Card] {
-        guard let cards else {
-            throw error ?? CardsError.unknown
-        }
-        return cards
     }
 }
