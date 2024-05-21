@@ -38,6 +38,8 @@
 		CDE2FE732BFCDD7F0031D8CE /* MagicCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE722BFCDD7F0031D8CE /* MagicCardsViewModel.swift */; };
 		CDE2FE782BFCDE0E0031D8CE /* CardsUseCaseDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE772BFCDE0E0031D8CE /* CardsUseCaseDummy.swift */; };
 		CDE2FE7A2BFCDE2B0031D8CE /* CardsUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE792BFCDE2B0031D8CE /* CardsUseCaseStub.swift */; };
+		CDE2FE7D2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE7C2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift */; };
+		CDE2FE7F2BFCED7A0031D8CE /* CardsRouterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE7E2BFCED7A0031D8CE /* CardsRouterDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		CDE2FE722BFCDD7F0031D8CE /* MagicCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsViewModel.swift; sourceTree = "<group>"; };
 		CDE2FE772BFCDE0E0031D8CE /* CardsUseCaseDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsUseCaseDummy.swift; sourceTree = "<group>"; };
 		CDE2FE792BFCDE2B0031D8CE /* CardsUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsUseCaseStub.swift; sourceTree = "<group>"; };
+		CDE2FE7C2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsViewControllerTests.swift; sourceTree = "<group>"; };
+		CDE2FE7E2BFCED7A0031D8CE /* CardsRouterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRouterDummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +406,7 @@
 		CDE2FE672BFBB5D50031D8CE /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				CDE2FE7E2BFCED7A0031D8CE /* CardsRouterDummy.swift */,
 				CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */,
 			);
 			path = Navigation;
@@ -410,6 +415,7 @@
 		CDE2FE682BFCB8600031D8CE /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				CDE2FE7B2BFCDF660031D8CE /* View */,
 				CDE2FE762BFCDDFE0031D8CE /* ViewModel */,
 			);
 			path = Cards;
@@ -447,6 +453,14 @@
 				CDE2FE692BFCB8880031D8CE /* MagicCardsViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDE2FE7B2BFCDF660031D8CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDE2FE7C2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE2FE4F2BFA8A220031D8CE /* URLSessionStub.swift in Sources */,
+				CDE2FE7D2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift in Sources */,
 				CDE2FE4D2BFA89E10031D8CE /* MagicCardsAPIStub.swift in Sources */,
 				CDE2FE5F2BFBB2A30031D8CE /* CardsRouterSpy.swift in Sources */,
 				CDE2FE2B2BF83B700031D8CE /* MagicCardsUseCaseTests.swift in Sources */,
@@ -586,6 +601,7 @@
 				CDE2FE6A2BFCB8880031D8CE /* MagicCardsViewModelTests.swift in Sources */,
 				CDE2FE582BFBAAC60031D8CE /* MainViewControllerTests.swift in Sources */,
 				CDE2FE7A2BFCDE2B0031D8CE /* CardsUseCaseStub.swift in Sources */,
+				CDE2FE7F2BFCED7A0031D8CE /* CardsRouterDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
