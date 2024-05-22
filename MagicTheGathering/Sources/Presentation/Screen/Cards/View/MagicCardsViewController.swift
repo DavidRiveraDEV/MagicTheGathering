@@ -83,7 +83,7 @@ extension MagicCardsViewController {
     }
 }
 
-// MARK: - Datasource
+// MARK: - TableView Datasource
 
 extension MagicCardsViewController {
 
@@ -92,12 +92,24 @@ extension MagicCardsViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        var content = UIListContentConfiguration.cell()
         let card = cards[indexPath.row]
+
+        var content = UIListContentConfiguration.cell()
         content.text = card.name
         content.secondaryText = "Type: \(card.type)"
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.contentConfiguration = content
         return cell
+    }
+}
+
+// MARK: - TableView Delegate
+
+extension MagicCardsViewController {
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let card = cards[indexPath.row]
+        router.navigateToCardDetail(card)
     }
 }

@@ -41,6 +41,7 @@
 		CDE2FE7D2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE7C2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift */; };
 		CDE2FE7F2BFCED7A0031D8CE /* CardsRouterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE7E2BFCED7A0031D8CE /* CardsRouterDummy.swift */; };
 		CDE2FE822BFCFDD50031D8CE /* MagicCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE812BFCFDD50031D8CE /* MagicCardsViewController.swift */; };
+		CDE2FE862BFE39A50031D8CE /* CardsViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FE852BFE39A50031D8CE /* CardsViewModelSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		CDE2FE7C2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsViewControllerTests.swift; sourceTree = "<group>"; };
 		CDE2FE7E2BFCED7A0031D8CE /* CardsRouterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRouterDummy.swift; sourceTree = "<group>"; };
 		CDE2FE812BFCFDD50031D8CE /* MagicCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsViewController.swift; sourceTree = "<group>"; };
+		CDE2FE852BFE39A50031D8CE /* CardsViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModelSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE2FE692BFCB8880031D8CE /* MagicCardsViewModelTests.swift */,
+				CDE2FE852BFE39A50031D8CE /* CardsViewModelSpy.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				CDE2FE6A2BFCB8880031D8CE /* MagicCardsViewModelTests.swift in Sources */,
 				CDE2FE582BFBAAC60031D8CE /* MainViewControllerTests.swift in Sources */,
 				CDE2FE7A2BFCDE2B0031D8CE /* CardsUseCaseStub.swift in Sources */,
+				CDE2FE862BFE39A50031D8CE /* CardsViewModelSpy.swift in Sources */,
 				CDE2FE7F2BFCED7A0031D8CE /* CardsRouterDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,4 +4,6 @@ import Foundation
 final class CardsRouterDummy: CardsRouter {
 
     func navigateToCards() {}
+
+    func navigateToCardDetail(_ card: Card) {}
 }

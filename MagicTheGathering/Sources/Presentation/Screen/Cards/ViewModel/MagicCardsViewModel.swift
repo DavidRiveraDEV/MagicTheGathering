@@ -2,7 +2,7 @@
 import Foundation
 import Combine
 
-final class MagicCardsViewModel: CardsViewModel {
+class MagicCardsViewModel: CardsViewModel {
 
     @Published private(set) var state: CardsViewState
 
