@@ -24,7 +24,8 @@ final class RemoteCardsRepository: CardsRepository {
             }
 
             do {
-                return try JSONDecoder().decode([Card].self, from: data)
+                let cardsResponse = try JSONDecoder().decode(CardsResponse.self, from: data)
+                return cardsResponse.cards
             } catch {
                 throw CardsError.unknown
             }

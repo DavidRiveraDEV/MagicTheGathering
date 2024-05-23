@@ -31,6 +31,7 @@ final class MagicCardsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.backgroundView = activityIndicator
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -78,8 +79,12 @@ extension MagicCardsViewController {
     }
 
     private func presentError(_ errorMessage: ErrorMessage) {
-        let alert = UIAlertController(title: errorMessage.title, message: errorMessage.message, preferredStyle: UIAlertController.Style.alert)
-        self.show(alert, sender: nil)
+        let alert = UIAlertController(title: errorMessage.title, 
+                                      message: errorMessage.message,
+                                      preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

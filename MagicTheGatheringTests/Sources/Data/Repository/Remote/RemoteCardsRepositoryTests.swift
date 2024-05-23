@@ -63,7 +63,7 @@ final class RemoteCardsRepositoryTests: XCTestCase {
     }
 
     func test_repository_getsCards_withSuccess() async throws {
-        let jsonString = #"[{"id":"1","name":"Name 1","type":"Type 1","text":"Text 1","imageUrl":"Url 1"},{"id":"2","name":"Name 2","type":"Type 2","text":"Text 2","imageUrl":"Url 2"},{"id":"3","name":"Name 3","type":"Type 3","text":"Text 3","imageUrl":"Url 3"}]"#
+        let jsonString = #"{"cards": [{"id":"1","name":"Name 1","type":"Type 1","text":"Text 1","imageUrl":"Url 1"},{"id":"2","name":"Name 2","type":"Type 2","text":"Text 2","imageUrl":"Url 2"},{"id":"3","name":"Name 3","type":"Type 3","text":"Text 3","imageUrl":"Url 3"}]}"#
         let data = jsonString.data(using: .utf8)!
         let session = URLSessionStub()
         session.result = (data, HTTPURLResponse(url: URL(string: "http://web.com")!,
