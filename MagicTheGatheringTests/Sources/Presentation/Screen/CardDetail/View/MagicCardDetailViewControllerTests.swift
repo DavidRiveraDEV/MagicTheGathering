@@ -28,7 +28,7 @@ final class MagicCardDetailViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.imageView.image, expectedImage)
     }
 
-    func test_viewController_displaysDefaultImage_withNoImage() {
+    func test_viewController_doesNotDisplaysImage_whenNoImage() {
         let card = Card(id: "84nf93owss", name: "My name", type: "My type", text: "My text", imageUrl: nil)
         let viewModel = MagicCardDetailViewModel(card: card, imageLoader: MagicCardImageLoader())
         let sut = getSut(viewModel: viewModel)
@@ -41,7 +41,7 @@ final class MagicCardDetailViewControllerTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1)
 
-        XCTAssertEqual(sut.imageView.image, UIImage(systemName: "photo"))
+        XCTAssertNil(sut.imageView.image)
     }
 
     func test_viewController_displaysDefaultImage_withErrorOnLoading() {
@@ -59,7 +59,7 @@ final class MagicCardDetailViewControllerTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1)
 
-        XCTAssertEqual(sut.imageView.image, UIImage(systemName: "photo"))
+        XCTAssertNil(sut.imageView.image)
     }
 
     // MARK: - Util

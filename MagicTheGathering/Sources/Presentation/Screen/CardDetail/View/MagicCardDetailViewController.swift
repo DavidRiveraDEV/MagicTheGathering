@@ -8,7 +8,8 @@ final class MagicCardDetailViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .title1)
-        label.textAlignment = .center
+        label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
 
@@ -17,6 +18,7 @@ final class MagicCardDetailViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .title3)
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
 
@@ -25,6 +27,7 @@ final class MagicCardDetailViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .body)
         label.textAlignment = .justified
+        label.numberOfLines = 0
         return label
     }()
 
@@ -80,6 +83,7 @@ final class MagicCardDetailViewController: UIViewController {
         ])
 
         containerView.addSubview(nameLabel)
+        nameLabel.setContentHuggingPriority(.required, for: .vertical)
         NSLayoutConstraint.activate([
             nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 24),
@@ -87,6 +91,7 @@ final class MagicCardDetailViewController: UIViewController {
         ])
 
         containerView.addSubview(typeLabel)
+        typeLabel.setContentHuggingPriority(.required, for: .vertical)
         NSLayoutConstraint.activate([
             typeLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             typeLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
@@ -97,19 +102,22 @@ final class MagicCardDetailViewController: UIViewController {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: 16),
             imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            imageView.widthAnchor.constraint(equalTo: containerView.widthAnchor, constant: 0.75)
+            imageView.widthAnchor.constraint(equalTo: containerView.widthAnchor)
         ])
 
         containerView.addSubview(textLabel)
         NSLayoutConstraint.activate([
             textLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+            textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24),
             textLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            textLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -24)
+            textLabel.bottomAnchor.constraint(lessThanOrEqualTo: containerView.bottomAnchor, constant: -24)
         ])
     }
 
     private func setContent() {
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = false
+        title = "Detail"
         nameLabel.text = viewModel.card.name
         typeLabel.text = viewModel.card.type
         textLabel.text = viewModel.card.text

@@ -4,7 +4,6 @@ import UIKit
 
 class MagicCardDetailViewModel: CardDetailViewModel {
 
-    private let defaultImage = UIImage(systemName: "photo")
     private let imageLoader: UIImageLoader
 
     let card: Card
@@ -16,13 +15,13 @@ class MagicCardDetailViewModel: CardDetailViewModel {
 
     func loadImage(completion: @escaping (UIImage?) -> Void) {
         guard let imageUrl = card.imageUrl, let url = URL(string: imageUrl) else {
-            completion(defaultImage)
+            completion(nil)
             return
         }
         Task(priority: .medium) {
             let image = await imageLoader.load(from: url)
-            DispatchQueue.main.async { [weak self] in
-                completion(image ?? self?.defaultImage)
+            DispatchQueue.main.async {
+                completion(image)
             }
         }
     }
