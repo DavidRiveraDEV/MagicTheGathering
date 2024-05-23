@@ -7,9 +7,15 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
 
     weak var router: CardsRouter?
+    var willAppear: (() -> Void)?
 
     @IBAction private func startButtonDidTap() {
         router?.navigateToCards()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        willAppear?()
     }
 }
 

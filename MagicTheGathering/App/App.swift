@@ -4,18 +4,12 @@ import UIKit
 
 final class App {
 
-    private let navigationController = UINavigationController()
-    private let router: CardsRouter
-
-    init() {
-        router = MagicCardsRouter(navigationController: navigationController)
-    }
-
+    private let router = MagicCardsRouter()
+    
     func start(windowScene: UIWindowScene) -> UIWindow {
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = navigationController
+        window.rootViewController = router.rootViewController
         window.makeKeyAndVisible()
-        router.navigateToMain()
         return window
     }
 }

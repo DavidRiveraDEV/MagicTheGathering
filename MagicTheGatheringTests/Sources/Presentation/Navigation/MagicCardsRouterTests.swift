@@ -6,44 +6,61 @@ import UIKit
 
 final class MagicCardsRouterTests: XCTestCase {
 
-    func test_router_navigatesToMainScreen() {
-        let navigationController = UINavigationController()
-        let sut = getSut(navigationController: navigationController)
-
-        sut.navigateToMain()
+    func test_router_navigatesToMainScreen_onInitialization() throws {
+        let sut = getSut()
         
-        XCTAssertEqual(navigationController.viewControllers.count, 1)
+        XCTAssertEqual(sut.rootViewController.viewControllers.count, 1)
+        let navigationController = try XCTUnwrap(sut.rootViewController.viewControllers.first as? UINavigationController)
         XCTAssertTrue(navigationController.viewControllers.first is MainViewController)
-
     }
 
-    func test_router_navigatesToCardsScreen() {
-        let navigationController = UINavigationController()
-        let sut = getSut(navigationController: navigationController)
+    func test_router_navigatesToCardsScreen_fromMainScreen() throws {
+        let sut = getSut()
 
         sut.navigateToCards()
 
-        XCTAssertEqual(navigationController.viewControllers.count, 1)
-        XCTAssertTrue(navigationController.viewControllers.first is MagicCardsViewController)
+        let expectation = expectation(description: "presenting")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
 
+        XCTAssertEqual(sut.rootViewController.viewControllers.count, 1)
+        let navigationController = try XCTUnwrap(sut.rootViewController.viewControllers.first as? UINavigationController)
+        XCTAssertTrue(navigationController.viewControllers[0] is MainViewController)
+        XCTAssertTrue(navigationController.viewControllers[1] is MagicCardsViewController)
     }
 
-    func test_router_navigatesToCardDetailScreen() {
-        let navigationController = UINavigationController()
-        let sut = getSut(navigationController: navigationController)
+    func test_router_navigatesToCardDetailScreen_fromCardsScreen() throws {
+        let sut = getSut()
 
+        sut.navigateToCards()
         let card = Card(id: "84nf93owss", name: "My name", type: "My type", text: "My text", imageUrl: nil)
         sut.navigateToCardDetail(card)
 
-        XCTAssertEqual(navigationController.viewControllers.count, 1)
-        XCTAssertTrue(navigationController.viewControllers.first is MagicCardDetailViewController)
+        let expectation = expectation(description: "presenting")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
 
+        XCTAssertEqual(sut.rootViewController.viewControllers.count, 2)
+        let navigationController = try XCTUnwrap(sut.rootViewController.viewControllers.first as? UINavigationController)
+        XCTAssertTrue(navigationController.viewControllers[0] is MainViewController)
+        XCTAssertTrue(navigationController.viewControllers[1] is MagicCardsViewController)
+        if sut.rootViewController.isCollapsed {
+            XCTAssertTrue(navigationController.viewControllers[2] is MagicCardDetailViewController)
+            XCTAssertTrue(sut.rootViewController.viewControllers.last is UINavigationController)
+        } else {
+            XCTAssertTrue(navigationController.viewControllers.last is MagicCardsViewController)
+            XCTAssertTrue(sut.rootViewController.viewControllers.last is MagicCardDetailViewController)
+        }
     }
 
     // MARK: - Util
 
-    private func getSut(navigationController: UINavigationController) -> MagicCardsRouter {
-        let sut = MagicCardsRouter(navigationController: navigationController)
+    private func getSut() -> MagicCardsRouter {
+        let sut = MagicCardsRouter()
 
         addTeardownBlock { [weak sut] in
             XCTAssertNil(sut)

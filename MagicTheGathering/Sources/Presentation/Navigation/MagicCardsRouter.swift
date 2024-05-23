@@ -4,15 +4,24 @@ import UIKit
 
 final class MagicCardsRouter: CardsRouter {
 
-    private let navigationController: UINavigationController
+    let rootViewController: UISplitViewController
+    let mainNavigationController: UINavigationController
 
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init() {
+        rootViewController = UISplitViewController()
+        rootViewController.preferredDisplayMode = .oneBesideSecondary
+        mainNavigationController = UINavigationController()
+        rootViewController.viewControllers = [mainNavigationController]
+        navigateToMain()
     }
 
     func navigateToMain() {
-        let main = MainViewController.instantiate(router: self)
-        navigationController.show(main, sender: nil)
+        let mainViewController = MainViewController.instantiate(router: self)
+        mainNavigationController.viewControllers = [mainViewController]
+        mainViewController.willAppear = { [weak self] in
+            guard let self, !self.rootViewController.isCollapsed else { return }
+            self.rootViewController.show(UIViewController(), sender: nil)
+        }
     }
 
     func navigateToCards() {
@@ -22,13 +31,17 @@ final class MagicCardsRouter: CardsRouter {
         let useCase = MagicCardsUseCase(repository: repository)
         let viewModel = MagicCardsViewModel(useCase: useCase)
         let cards = MagicCardsViewController(viewModel: viewModel, router: self)
-        navigationController.show(cards, sender: nil)
+        mainNavigationController.show(cards, sender: nil)
     }
 
     func navigateToCardDetail(_ card: Card) {
         let imageLoader = MagicCardImageLoader()
         let viewModel = MagicCardDetailViewModel(card: card, imageLoader: imageLoader)
         let cardDetail = MagicCardDetailViewController(viewModel: viewModel)
-        navigationController.show(cardDetail, sender: nil)
+        if self.rootViewController.isCollapsed {
+            mainNavigationController.show(cardDetail, sender: nil)
+        } else {
+            rootViewController.show(cardDetail, sender: nil)
+        }
     }
 }
