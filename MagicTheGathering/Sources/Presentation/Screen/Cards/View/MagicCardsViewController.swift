@@ -6,7 +6,7 @@ import Combine
 final class MagicCardsViewController: UITableViewController {
 
     private let viewModel: MagicCardsViewModel
-    private let router: CardsRouter
+    private weak var router: CardsRouter?
     private var cards: [Card] = []
 
     private var cancellables = Set<AnyCancellable>()
@@ -79,7 +79,7 @@ extension MagicCardsViewController {
 
     private func presentError(_ errorMessage: ErrorMessage) {
         let alert = UIAlertController(title: errorMessage.title, message: errorMessage.message, preferredStyle: UIAlertController.Style.alert)
-        self.present(alert, animated: true, completion: nil)
+        self.show(alert, sender: nil)
     }
 }
 
@@ -110,6 +110,6 @@ extension MagicCardsViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let card = cards[indexPath.row]
-        router.navigateToCardDetail(card)
+        router?.navigateToCardDetail(card)
     }
 }

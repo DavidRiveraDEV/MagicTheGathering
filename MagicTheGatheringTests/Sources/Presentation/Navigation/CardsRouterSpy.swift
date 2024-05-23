@@ -4,8 +4,13 @@ import Foundation
 
 final class CardsRouterSpy: CardsRouter {
 
+    var navigateToMain_calledTimes = 0
     var navigateToCards_calledTimes = 0
     var navigateToCardDetail_cards = [Card]()
+
+    func navigateToMain() {
+        navigateToMain_calledTimes += 1
+    }
 
     func navigateToCards() {
         navigateToCards_calledTimes += 1

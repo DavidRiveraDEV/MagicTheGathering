@@ -6,7 +6,7 @@ final class MainViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
 
-    var router: CardsRouter?
+    weak var router: CardsRouter?
 
     @IBAction private func startButtonDidTap() {
         router?.navigateToCards()

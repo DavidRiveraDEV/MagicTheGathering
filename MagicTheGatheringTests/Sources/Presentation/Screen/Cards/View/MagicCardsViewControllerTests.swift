@@ -61,8 +61,8 @@ final class MagicCardsViewControllerTests: XCTestCase {
         let viewModel = MagicCardsViewModel(useCase: CardsUseCaseDummy())
         let sut = getSut(viewModel: viewModel, router: CardsRouterDummy())
 
-        let originalFunc = class_getInstanceMethod(UIViewController.self, #selector(UIViewController.present(_:animated:completion:)))!
-        let swizzledFunc = class_getInstanceMethod(MagicCardsViewControllerTests.self, #selector(self.presentAlert(_:animated:completion:)))!
+        let originalFunc = class_getInstanceMethod(UIViewController.self, #selector(UIViewController.show(_:sender:)))!
+        let swizzledFunc = class_getInstanceMethod(MagicCardsViewControllerTests.self, #selector(self.show(_:sender:)))!
         method_exchangeImplementations(originalFunc, swizzledFunc)
 
         _ = sut.view
@@ -73,7 +73,7 @@ final class MagicCardsViewControllerTests: XCTestCase {
         method_exchangeImplementations(swizzledFunc, originalFunc)
     }
 
-    @objc private func presentAlert(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) throws {
+    @objc private func show(_ viewControllerToPresent: UIViewController, sender: Any?) throws {
         let alertController = try XCTUnwrap(viewControllerToPresent as? UIAlertController)
         XCTAssertEqual(alertController.title, "Title")
         XCTAssertEqual(alertController.message, "Message")

@@ -12,6 +12,8 @@
 		CD037FB22BFECE94000FAFD5 /* UIImageLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD037FB12BFECE94000FAFD5 /* UIImageLoaderStub.swift */; };
 		CD037FB42BFED787000FAFD5 /* UIImageLoaderDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD037FB32BFED787000FAFD5 /* UIImageLoaderDummy.swift */; };
 		CD037FB72BFED88F000FAFD5 /* MagicCardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD037FB62BFED88F000FAFD5 /* MagicCardDetailViewController.swift */; };
+		CD62C1AE2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1AD2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift */; };
+		CD62C1B02BFF91130013D3F2 /* MagicCardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */; };
 		CDE2FDF22BF834590031D8CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF12BF834590031D8CE /* AppDelegate.swift */; };
 		CDE2FDF42BF834590031D8CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */; };
 		CDE2FDF92BF834590031D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE2FDF72BF834590031D8CE /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		CD037FB12BFECE94000FAFD5 /* UIImageLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoaderStub.swift; sourceTree = "<group>"; };
 		CD037FB32BFED787000FAFD5 /* UIImageLoaderDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoaderDummy.swift; sourceTree = "<group>"; };
 		CD037FB62BFED88F000FAFD5 /* MagicCardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardDetailViewController.swift; sourceTree = "<group>"; };
+		CD62C1AD2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsRouterTests.swift; sourceTree = "<group>"; };
+		CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsRouter.swift; sourceTree = "<group>"; };
 		CDE2FDEE2BF834590031D8CE /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE2FDF12BF834590031D8CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -449,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE2FE5A2BFBB10C0031D8CE /* CardsRouter.swift */,
+				CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 			children = (
 				CDE2FE7E2BFCED7A0031D8CE /* CardsRouterDummy.swift */,
 				CDE2FE5E2BFBB2A30031D8CE /* CardsRouterSpy.swift */,
+				CD62C1AD2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -699,6 +705,7 @@
 				CD037FAB2BFECE09000FAFD5 /* UIImageLoader.swift in Sources */,
 				CDE2FE362BF844E70031D8CE /* MagicCardsUseCase.swift in Sources */,
 				CDE2FE6F2BFCDD120031D8CE /* ErrorMessage.swift in Sources */,
+				CD62C1B02BFF91130013D3F2 /* MagicCardsRouter.swift in Sources */,
 				CDE2FE4A2BFA890D0031D8CE /* RemoteCardsRepository.swift in Sources */,
 				CDE2FE2E2BF8448F0031D8CE /* Card.swift in Sources */,
 				CDE2FDF42BF834590031D8CE /* SceneDelegate.swift in Sources */,
@@ -725,6 +732,7 @@
 				CDE2FE582BFBAAC60031D8CE /* MainViewControllerTests.swift in Sources */,
 				CDE2FE7A2BFCDE2B0031D8CE /* CardsUseCaseStub.swift in Sources */,
 				CDE2FE862BFE39A50031D8CE /* CardsViewModelSpy.swift in Sources */,
+				CD62C1AE2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift in Sources */,
 				CDE2FE7F2BFCED7A0031D8CE /* CardsRouterDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
