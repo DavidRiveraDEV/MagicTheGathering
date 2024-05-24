@@ -22,6 +22,10 @@
 		CD62C1C12C001FED0013D3F2 /* CardsRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1C02C001FED0013D3F2 /* CardsRepositorySpy.swift */; };
 		CD62C1C32C00201A0013D3F2 /* CardsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1C22C00201A0013D3F2 /* CardsRepositoryMock.swift */; };
 		CD62C1C62C0020C20013D3F2 /* CachedCardsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1C42C0020990013D3F2 /* CachedCardsRepository.swift */; };
+		CDD8CEDD2C00DAD400E04C88 /* CachedUIImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEDC2C00DAD400E04C88 /* CachedUIImageLoaderTests.swift */; };
+		CDD8CEDF2C00E1F500E04C88 /* UIImageLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEDE2C00E1F500E04C88 /* UIImageLoaderSpy.swift */; };
+		CDD8CEE12C00E21A00E04C88 /* UIImageLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEE02C00E21A00E04C88 /* UIImageLoaderMock.swift */; };
+		CDD8CEE32C00E24700E04C88 /* CachedUIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEE22C00E24700E04C88 /* CachedUIImageLoader.swift */; };
 		CDE2FDF22BF834590031D8CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF12BF834590031D8CE /* AppDelegate.swift */; };
 		CDE2FDF42BF834590031D8CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */; };
 		CDE2FDF92BF834590031D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE2FDF72BF834590031D8CE /* Main.storyboard */; };
@@ -89,6 +93,10 @@
 		CD62C1C02C001FED0013D3F2 /* CardsRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRepositorySpy.swift; sourceTree = "<group>"; };
 		CD62C1C22C00201A0013D3F2 /* CardsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRepositoryMock.swift; sourceTree = "<group>"; };
 		CD62C1C42C0020990013D3F2 /* CachedCardsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCardsRepository.swift; sourceTree = "<group>"; };
+		CDD8CEDC2C00DAD400E04C88 /* CachedUIImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedUIImageLoaderTests.swift; sourceTree = "<group>"; };
+		CDD8CEDE2C00E1F500E04C88 /* UIImageLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoaderSpy.swift; sourceTree = "<group>"; };
+		CDD8CEE02C00E21A00E04C88 /* UIImageLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoaderMock.swift; sourceTree = "<group>"; };
+		CDD8CEE22C00E24700E04C88 /* CachedUIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedUIImageLoader.swift; sourceTree = "<group>"; };
 		CDE2FDEE2BF834590031D8CE /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE2FDF12BF834590031D8CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +164,7 @@
 			children = (
 				CD037FAA2BFECE09000FAFD5 /* UIImageLoader.swift */,
 				CD037FAD2BFECE3D000FAFD5 /* MagicCardImageLoader.swift */,
+				CDD8CEE22C00E24700E04C88 /* CachedUIImageLoader.swift */,
 			);
 			path = ImageLoader;
 			sourceTree = "<group>";
@@ -173,6 +182,9 @@
 			children = (
 				CD037FB12BFECE94000FAFD5 /* UIImageLoaderStub.swift */,
 				CD037FB32BFED787000FAFD5 /* UIImageLoaderDummy.swift */,
+				CDD8CEDC2C00DAD400E04C88 /* CachedUIImageLoaderTests.swift */,
+				CDD8CEDE2C00E1F500E04C88 /* UIImageLoaderSpy.swift */,
+				CDD8CEE02C00E21A00E04C88 /* UIImageLoaderMock.swift */,
 			);
 			path = ImageLoader;
 			sourceTree = "<group>";
@@ -399,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE2FE3F2BFA722A0031D8CE /* Remote */,
+				CD62C1BE2C0019390013D3F2 /* CachedCardsRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -445,7 +458,6 @@
 			isa = PBXGroup;
 			children = (
 				CDE2FE4C2BFA89E10031D8CE /* MagicCardsAPIStub.swift */,
-				CD62C1BE2C0019390013D3F2 /* CachedCardsRepositoryTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -750,6 +762,7 @@
 				CDE2FE382BF8451E0031D8CE /* CardsError.swift in Sources */,
 				CDE2FE522BFB90FC0031D8CE /* URLSession.swift in Sources */,
 				CDE2FE542BFBA7F00031D8CE /* MainViewController.swift in Sources */,
+				CDD8CEE32C00E24700E04C88 /* CachedUIImageLoader.swift in Sources */,
 				CDE2FE732BFCDD7F0031D8CE /* MagicCardsViewModel.swift in Sources */,
 				CDE2FE342BF844D20031D8CE /* CardsUseCase.swift in Sources */,
 				CD037FAE2BFECE3D000FAFD5 /* MagicCardImageLoader.swift in Sources */,
@@ -781,7 +794,10 @@
 				CD62C1B92C0010680013D3F2 /* CacherTests.swift in Sources */,
 				CDE2FE932BFE3D240031D8CE /* MagicCardDetailViewControllerTests.swift in Sources */,
 				CDE2FE4D2BFA89E10031D8CE /* MagicCardsAPIStub.swift in Sources */,
+				CDD8CEE12C00E21A00E04C88 /* UIImageLoaderMock.swift in Sources */,
+				CDD8CEDF2C00E1F500E04C88 /* UIImageLoaderSpy.swift in Sources */,
 				CDE2FE8A2BFE3B2F0031D8CE /* MagicCardDetailViewModelTests.swift in Sources */,
+				CDD8CEDD2C00DAD400E04C88 /* CachedUIImageLoaderTests.swift in Sources */,
 				CD037FB42BFED787000FAFD5 /* UIImageLoaderDummy.swift in Sources */,
 				CDE2FE5F2BFBB2A30031D8CE /* CardsRouterSpy.swift in Sources */,
 				CDE2FE2B2BF83B700031D8CE /* MagicCardsUseCaseTests.swift in Sources */,

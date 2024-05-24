@@ -7,6 +7,7 @@ final class MagicCardsRouter: CardsRouter {
     let rootViewController: UISplitViewController
     private let mainNavigationController: UINavigationController
     private let cardsRepositoryCacher = Cacher<String, [Card]>()
+    private let imageCacher = Cacher<String, UIImage>()
 
     init() {
         rootViewController = UISplitViewController()
@@ -38,7 +39,8 @@ final class MagicCardsRouter: CardsRouter {
 
     func navigateToCardDetail(_ card: Card) {
         let imageLoader = MagicCardImageLoader()
-        let viewModel = MagicCardDetailViewModel(card: card, imageLoader: imageLoader)
+        let chachedImageLoader = CachedUIImageLoader(imageLoader: imageLoader, cacher: imageCacher)
+        let viewModel = MagicCardDetailViewModel(card: card, imageLoader: chachedImageLoader)
         let cardDetail = MagicCardDetailViewController(viewModel: viewModel)
         if self.rootViewController.isCollapsed {
             mainNavigationController.show(cardDetail, sender: nil)
