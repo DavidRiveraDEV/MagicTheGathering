@@ -37,16 +37,4 @@ final class CacherTests: XCTestCase {
 
         XCTAssertNil(savedValue)
     }
-
-    // MARK: - Util
-
-    private func getSut<Key: Hashable, Value>() -> Cacher<Key, Value> {
-        let sut = Cacher<Key, Value>()
-
-        addTeardownBlock {
-            XCTAssertNil(sut)
-        }
-
-        return sut
-    }
 }

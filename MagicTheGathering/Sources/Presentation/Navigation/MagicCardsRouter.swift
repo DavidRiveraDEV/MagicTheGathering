@@ -5,7 +5,8 @@ import UIKit
 final class MagicCardsRouter: CardsRouter {
 
     let rootViewController: UISplitViewController
-    let mainNavigationController: UINavigationController
+    private let mainNavigationController: UINavigationController
+    private let cardsRepositoryCacher = Cacher<String, [Card]>()
 
     init() {
         rootViewController = UISplitViewController()
@@ -27,8 +28,9 @@ final class MagicCardsRouter: CardsRouter {
     func navigateToCards() {
         let api = MagicCardsAPI()
         let session = Foundation.URLSession.shared
-        let repository = RemoteCardsRepository(api: api, session: session)
-        let useCase = MagicCardsUseCase(repository: repository)
+        let remoteRepository = RemoteCardsRepository(api: api, session: session)
+        let cachedRepository = CachedCardsRepository(repository: remoteRepository, cacher: cardsRepositoryCacher)
+        let useCase = MagicCardsUseCase(repository: cachedRepository)
         let viewModel = MagicCardsViewModel(useCase: useCase)
         let cards = MagicCardsViewController(viewModel: viewModel, router: self)
         mainNavigationController.show(cards, sender: nil)
