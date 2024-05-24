@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,32 +13,32 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="MagicTheGathering" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98s-kj-eMV">
-                                <rect key="frame" x="32" y="322.33333333333331" width="329" height="207.66666666666669"/>
+                                <rect key="frame" x="84.333333333333343" y="359.33333333333331" width="259.33333333333326" height="207.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magic: The Gathering" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFD-3j-uEs">
-                                        <rect key="frame" x="0.0" y="0.0" width="329" height="33.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="259.33333333333331" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer: David Rivera" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8g-ou-TF2">
-                                        <rect key="frame" x="0.0" y="81.666666666666686" width="329" height="18"/>
+                                        <rect key="frame" x="0.0" y="81.666666666666686" width="259.33333333333331" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: davidrivera.dev@gmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t9-0X-07m">
-                                        <rect key="frame" x="0.0" y="111.66666666666669" width="329" height="18"/>
+                                        <rect key="frame" x="0.0" y="111.66666666666669" width="259.33333333333331" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: May 17, 2024" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9os-OD-yn2">
-                                        <rect key="frame" x="0.0" y="141.66666666666669" width="329" height="18"/>
+                                        <rect key="frame" x="0.0" y="141.66666666666669" width="259.33333333333331" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qou-1q-Isn">
-                                <rect key="frame" x="32" y="771" width="329" height="35"/>
+                                <rect key="frame" x="32" y="845" width="364" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start"/>
                                 <connections>
@@ -73,9 +73,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="98s-kj-eMV" secondAttribute="trailing" constant="32" id="6aH-Uq-6Gr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="98s-kj-eMV" secondAttribute="trailing" constant="32" id="6aH-Uq-6Gr"/>
                             <constraint firstItem="98s-kj-eMV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9lf-C5-RSc"/>
-                            <constraint firstItem="98s-kj-eMV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="BoI-U8-Qp9"/>
+                            <constraint firstItem="98s-kj-eMV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="BoI-U8-Qp9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qou-1q-Isn" secondAttribute="bottom" constant="12" id="VTM-wf-KSs"/>
                             <constraint firstItem="qou-1q-Isn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Z7c-oZ-mUL">
                                 <variation key="widthClass=regular" constant="120"/>
