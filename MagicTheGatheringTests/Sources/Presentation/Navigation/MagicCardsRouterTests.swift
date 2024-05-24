@@ -60,7 +60,11 @@ final class MagicCardsRouterTests: XCTestCase {
     // MARK: - Util
 
     private func getSut() -> MagicCardsRouter {
-        let sut = MagicCardsRouter()
+        let cardsDependencyContainer = CardsScreenDependencyContainer()
+        let cardDetailDependencyContainer = CardDetailScreenDependencyContainer()
+        let screenBuilder = ScreenDependencyContainer(cardsDependencyContainer: cardsDependencyContainer,
+                                                      cardDetailDependencyContainer: cardDetailDependencyContainer)
+        let sut = MagicCardsRouter(screenBuilder: screenBuilder)
 
         addTeardownBlock { [weak sut] in
             XCTAssertNil(sut)

@@ -14,7 +14,7 @@
 		CD037FB72BFED88F000FAFD5 /* MagicCardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD037FB62BFED88F000FAFD5 /* MagicCardDetailViewController.swift */; };
 		CD62C1AE2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1AD2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift */; };
 		CD62C1B02BFF91130013D3F2 /* MagicCardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */; };
-		CD62C1B22BFF9AAE0013D3F2 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1B12BFF9AAE0013D3F2 /* App.swift */; };
+		CD62C1B22BFF9AAE0013D3F2 /* MagicTheGatheringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1B12BFF9AAE0013D3F2 /* MagicTheGatheringApp.swift */; };
 		CD62C1B42BFFA1E90013D3F2 /* CardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1B32BFFA1E90013D3F2 /* CardsResponse.swift */; };
 		CD62C1B92C0010680013D3F2 /* CacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1B82C0010680013D3F2 /* CacherTests.swift */; };
 		CD62C1BD2C0017C50013D3F2 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1BC2C0017C50013D3F2 /* Cacher.swift */; };
@@ -26,6 +26,12 @@
 		CDD8CEDF2C00E1F500E04C88 /* UIImageLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEDE2C00E1F500E04C88 /* UIImageLoaderSpy.swift */; };
 		CDD8CEE12C00E21A00E04C88 /* UIImageLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEE02C00E21A00E04C88 /* UIImageLoaderMock.swift */; };
 		CDD8CEE32C00E24700E04C88 /* CachedUIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEE22C00E24700E04C88 /* CachedUIImageLoader.swift */; };
+		CDD8CEE62C00E5DF00E04C88 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEE52C00E5DF00E04C88 /* AppDependencyContainer.swift */; };
+		CDD8CEE92C00E99100E04C88 /* ScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEE72C00E94B00E04C88 /* ScreenBuilder.swift */; };
+		CDD8CEEB2C00EBE200E04C88 /* ScreenDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEEA2C00EBE200E04C88 /* ScreenDependencyContainer.swift */; };
+		CDD8CEED2C00EDC900E04C88 /* MainScreenDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEEC2C00EDC900E04C88 /* MainScreenDependencyContainer.swift */; };
+		CDD8CEEF2C00EE1E00E04C88 /* CardsScreenDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEEE2C00EE1E00E04C88 /* CardsScreenDependencyContainer.swift */; };
+		CDD8CEF12C00F1A800E04C88 /* CardDetailScreenDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8CEF02C00F1A800E04C88 /* CardDetailScreenDependencyContainer.swift */; };
 		CDE2FDF22BF834590031D8CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF12BF834590031D8CE /* AppDelegate.swift */; };
 		CDE2FDF42BF834590031D8CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */; };
 		CDE2FDF92BF834590031D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE2FDF72BF834590031D8CE /* Main.storyboard */; };
@@ -85,7 +91,7 @@
 		CD037FB62BFED88F000FAFD5 /* MagicCardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardDetailViewController.swift; sourceTree = "<group>"; };
 		CD62C1AD2BFF8AA40013D3F2 /* MagicCardsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsRouterTests.swift; sourceTree = "<group>"; };
 		CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsRouter.swift; sourceTree = "<group>"; };
-		CD62C1B12BFF9AAE0013D3F2 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		CD62C1B12BFF9AAE0013D3F2 /* MagicTheGatheringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicTheGatheringApp.swift; sourceTree = "<group>"; };
 		CD62C1B32BFFA1E90013D3F2 /* CardsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsResponse.swift; sourceTree = "<group>"; };
 		CD62C1B82C0010680013D3F2 /* CacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherTests.swift; sourceTree = "<group>"; };
 		CD62C1BC2C0017C50013D3F2 /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
@@ -97,6 +103,12 @@
 		CDD8CEDE2C00E1F500E04C88 /* UIImageLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoaderSpy.swift; sourceTree = "<group>"; };
 		CDD8CEE02C00E21A00E04C88 /* UIImageLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoaderMock.swift; sourceTree = "<group>"; };
 		CDD8CEE22C00E24700E04C88 /* CachedUIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedUIImageLoader.swift; sourceTree = "<group>"; };
+		CDD8CEE52C00E5DF00E04C88 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		CDD8CEE72C00E94B00E04C88 /* ScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
+		CDD8CEEA2C00EBE200E04C88 /* ScreenDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDependencyContainer.swift; sourceTree = "<group>"; };
+		CDD8CEEC2C00EDC900E04C88 /* MainScreenDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenDependencyContainer.swift; sourceTree = "<group>"; };
+		CDD8CEEE2C00EE1E00E04C88 /* CardsScreenDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsScreenDependencyContainer.swift; sourceTree = "<group>"; };
+		CDD8CEF02C00F1A800E04C88 /* CardDetailScreenDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailScreenDependencyContainer.swift; sourceTree = "<group>"; };
 		CDE2FDEE2BF834590031D8CE /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE2FDF12BF834590031D8CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +241,18 @@
 			path = Caching;
 			sourceTree = "<group>";
 		};
+		CDD8CEE42C00E5C800E04C88 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CDD8CEE52C00E5DF00E04C88 /* AppDependencyContainer.swift */,
+				CDD8CEEA2C00EBE200E04C88 /* ScreenDependencyContainer.swift */,
+				CDD8CEEC2C00EDC900E04C88 /* MainScreenDependencyContainer.swift */,
+				CDD8CEEE2C00EE1E00E04C88 /* CardsScreenDependencyContainer.swift */,
+				CDD8CEF02C00F1A800E04C88 /* CardDetailScreenDependencyContainer.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
 		CDE2FDE52BF834590031D8CE = {
 			isa = PBXGroup;
 			children = (
@@ -276,7 +300,7 @@
 		CDE2FE222BF8380D0031D8CE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CD62C1B12BFF9AAE0013D3F2 /* App.swift */,
+				CD62C1B12BFF9AAE0013D3F2 /* MagicTheGatheringApp.swift */,
 				CDE2FDF12BF834590031D8CE /* AppDelegate.swift */,
 				CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */,
 				CDE2FDFC2BF8345A0031D8CE /* LaunchScreen.storyboard */,
@@ -288,6 +312,7 @@
 		CDE2FE232BF838340031D8CE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8CEE42C00E5C800E04C88 /* DependencyContainer */,
 				CDE2FE262BF838B40031D8CE /* Data */,
 				CDE2FE252BF838AA0031D8CE /* Domain */,
 				CDE2FE242BF838990031D8CE /* Presentation */,
@@ -522,6 +547,7 @@
 			children = (
 				CDE2FE5A2BFBB10C0031D8CE /* CardsRouter.swift */,
 				CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */,
+				CDD8CEE72C00E94B00E04C88 /* ScreenBuilder.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -755,6 +781,8 @@
 				CDE2FE612BFBB2F50031D8CE /* UIStoryboard+Extension.swift in Sources */,
 				CD62C1BD2C0017C50013D3F2 /* Cacher.swift in Sources */,
 				CDE2FE462BFA88E30031D8CE /* CardsAPI.swift in Sources */,
+				CDD8CEEF2C00EE1E00E04C88 /* CardsScreenDependencyContainer.swift in Sources */,
+				CDD8CEED2C00EDC900E04C88 /* MainScreenDependencyContainer.swift in Sources */,
 				CDE2FE712BFCDD6D0031D8CE /* CardsViewState.swift in Sources */,
 				CD037FB72BFED88F000FAFD5 /* MagicCardDetailViewController.swift in Sources */,
 				CDE2FE822BFCFDD50031D8CE /* MagicCardsViewController.swift in Sources */,
@@ -765,15 +793,19 @@
 				CDD8CEE32C00E24700E04C88 /* CachedUIImageLoader.swift in Sources */,
 				CDE2FE732BFCDD7F0031D8CE /* MagicCardsViewModel.swift in Sources */,
 				CDE2FE342BF844D20031D8CE /* CardsUseCase.swift in Sources */,
+				CDD8CEEB2C00EBE200E04C88 /* ScreenDependencyContainer.swift in Sources */,
 				CD037FAE2BFECE3D000FAFD5 /* MagicCardImageLoader.swift in Sources */,
 				CDE2FDF22BF834590031D8CE /* AppDelegate.swift in Sources */,
-				CD62C1B22BFF9AAE0013D3F2 /* App.swift in Sources */,
+				CD62C1B22BFF9AAE0013D3F2 /* MagicTheGatheringApp.swift in Sources */,
 				CDE2FE302BF844A30031D8CE /* CardsRepository.swift in Sources */,
 				CD62C1B42BFFA1E90013D3F2 /* CardsResponse.swift in Sources */,
+				CDD8CEE62C00E5DF00E04C88 /* AppDependencyContainer.swift in Sources */,
 				CDE2FE5B2BFBB10C0031D8CE /* CardsRouter.swift in Sources */,
 				CDE2FE8E2BFE3CA10031D8CE /* CardDetailViewModel.swift in Sources */,
+				CDD8CEE92C00E99100E04C88 /* ScreenBuilder.swift in Sources */,
 				CDE2FE902BFE3CB50031D8CE /* MagicCardDetailViewModel.swift in Sources */,
 				CDE2FE482BFA88F60031D8CE /* MagicCardsAPI.swift in Sources */,
+				CDD8CEF12C00F1A800E04C88 /* CardDetailScreenDependencyContainer.swift in Sources */,
 				CD037FAB2BFECE09000FAFD5 /* UIImageLoader.swift in Sources */,
 				CDE2FE362BF844E70031D8CE /* MagicCardsUseCase.swift in Sources */,
 				CD62C1C62C0020C20013D3F2 /* CachedCardsRepository.swift in Sources */,
