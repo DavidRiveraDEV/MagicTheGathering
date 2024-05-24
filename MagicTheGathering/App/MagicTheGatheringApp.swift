@@ -2,18 +2,17 @@
 import Foundation
 import UIKit
 
-final class MagicTheGatheringApp {
+final class MagicTheGatheringApp: UIWindow {
 
-    private let router: MagicCardsRouter
+    private let dependencyContainer = AppDependencyContainer()
 
-    init(router: MagicCardsRouter) {
-        self.router = router
+    override init(windowScene: UIWindowScene) {
+        super.init(windowScene: windowScene)
+        rootViewController = dependencyContainer.rootViewController
+        makeKeyAndVisible()
     }
-
-    func start(windowScene: UIWindowScene) -> UIWindow {
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = router.rootViewController
-        window.makeKeyAndVisible()
-        return window
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -1,19 +1,23 @@
 
 import Foundation
+import UIKit
 
 final class AppDependencyContainer {
 
-    static func buildApp() -> MagicTheGatheringApp {
-        let router = buildCardsRouter()
-        return MagicTheGatheringApp(router: router)
+    private lazy var router: MagicCardsRouter = {
+        return buildCardsRouter()
+    }()
+
+    var rootViewController: UIViewController {
+        router.rootViewController
     }
 
-    private static func buildCardsRouter() -> MagicCardsRouter {
+    private func buildCardsRouter() -> MagicCardsRouter {
         let screenBuilder = buildScreenBuilder()
         return MagicCardsRouter(screenBuilder: screenBuilder)
     }
 
-    private static func buildScreenBuilder() -> ScreenBuilder {
+    private func buildScreenBuilder() -> ScreenBuilder {
         let cardsDependencyContainer = CardsScreenDependencyContainer()
         let cardDetailDependencyContainer = CardDetailScreenDependencyContainer()
         return ScreenDependencyContainer(cardsDependencyContainer: cardsDependencyContainer,

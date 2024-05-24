@@ -5,13 +5,17 @@ import UIKit
 final class MagicCardsRouter: CardsRouter {
 
     private let screenBuilder: ScreenBuilder
-    let rootViewController = UISplitViewController()
     private let mainNavigationController = UINavigationController()
+
+    private(set) lazy var rootViewController: UISplitViewController = {
+        let splitViewController = UISplitViewController()
+        splitViewController.preferredDisplayMode = .oneBesideSecondary
+        splitViewController.viewControllers = [mainNavigationController]
+        return splitViewController
+    }()
 
     init(screenBuilder: ScreenBuilder) {
         self.screenBuilder = screenBuilder
-        rootViewController.preferredDisplayMode = .oneBesideSecondary
-        rootViewController.viewControllers = [mainNavigationController]
         navigateToMain()
     }
 
