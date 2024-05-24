@@ -16,6 +16,8 @@
 		CD62C1B02BFF91130013D3F2 /* MagicCardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */; };
 		CD62C1B22BFF9AAE0013D3F2 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1B12BFF9AAE0013D3F2 /* App.swift */; };
 		CD62C1B42BFFA1E90013D3F2 /* CardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1B32BFFA1E90013D3F2 /* CardsResponse.swift */; };
+		CD62C1B92C0010680013D3F2 /* CacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1B82C0010680013D3F2 /* CacherTests.swift */; };
+		CD62C1BD2C0017C50013D3F2 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD62C1BC2C0017C50013D3F2 /* Cacher.swift */; };
 		CDE2FDF22BF834590031D8CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF12BF834590031D8CE /* AppDelegate.swift */; };
 		CDE2FDF42BF834590031D8CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */; };
 		CDE2FDF92BF834590031D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE2FDF72BF834590031D8CE /* Main.storyboard */; };
@@ -77,6 +79,8 @@
 		CD62C1AF2BFF91130013D3F2 /* MagicCardsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardsRouter.swift; sourceTree = "<group>"; };
 		CD62C1B12BFF9AAE0013D3F2 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CD62C1B32BFFA1E90013D3F2 /* CardsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsResponse.swift; sourceTree = "<group>"; };
+		CD62C1B82C0010680013D3F2 /* CacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherTests.swift; sourceTree = "<group>"; };
+		CD62C1BC2C0017C50013D3F2 /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		CDE2FDEE2BF834590031D8CE /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE2FDF12BF834590031D8CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE2FDF32BF834590031D8CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +177,38 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CD62C1B52C0010340013D3F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CD62C1B62C0010490013D3F2 /* Caching */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD62C1B62C0010490013D3F2 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				CD62C1B82C0010680013D3F2 /* CacherTests.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
+		CD62C1BA2C0017AB0013D3F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CD62C1BB2C0017BA0013D3F2 /* Caching */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD62C1BB2C0017BA0013D3F2 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				CD62C1BC2C0017C50013D3F2 /* Cacher.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
 		CDE2FDE52BF834590031D8CE = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +271,7 @@
 				CDE2FE262BF838B40031D8CE /* Data */,
 				CDE2FE252BF838AA0031D8CE /* Domain */,
 				CDE2FE242BF838990031D8CE /* Presentation */,
+				CD62C1BA2C0017AB0013D3F2 /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -281,6 +318,7 @@
 				CDE2FE3D2BFA713A0031D8CE /* Data */,
 				CDE2FE292BF83B470031D8CE /* Domain */,
 				CDE2FE552BFBAA9B0031D8CE /* Presentation */,
+				CD62C1B52C0010340013D3F2 /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -691,6 +729,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE2FE612BFBB2F50031D8CE /* UIStoryboard+Extension.swift in Sources */,
+				CD62C1BD2C0017C50013D3F2 /* Cacher.swift in Sources */,
 				CDE2FE462BFA88E30031D8CE /* CardsAPI.swift in Sources */,
 				CDE2FE712BFCDD6D0031D8CE /* CardsViewState.swift in Sources */,
 				CD037FB72BFED88F000FAFD5 /* MagicCardDetailViewController.swift in Sources */,
@@ -726,6 +765,7 @@
 			files = (
 				CDE2FE4F2BFA8A220031D8CE /* URLSessionStub.swift in Sources */,
 				CDE2FE7D2BFCDFA00031D8CE /* MagicCardsViewControllerTests.swift in Sources */,
+				CD62C1B92C0010680013D3F2 /* CacherTests.swift in Sources */,
 				CDE2FE932BFE3D240031D8CE /* MagicCardDetailViewControllerTests.swift in Sources */,
 				CDE2FE4D2BFA89E10031D8CE /* MagicCardsAPIStub.swift in Sources */,
 				CDE2FE8A2BFE3B2F0031D8CE /* MagicCardDetailViewModelTests.swift in Sources */,
