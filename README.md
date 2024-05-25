@@ -90,6 +90,18 @@ El proyecto cuenta con una cobertura del *95%* entre pruebas unitarias y de inte
 <img width="400" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/542415f8-71a6-4d45-b306-5623fed44eec"/>
 
 
+## Capturas de pantalla
+
+### iPhone - Portrait
+<img width="250" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/b8a8918b-fcff-4ff2-a7e6-e013b5a0a7fb"/> <img width="250" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/bdca3590-f6ab-4071-830b-779036bee389"/> <img width="250" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/8356ea49-8ad1-4720-8dd5-e848ad505902"/> <img width="250" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/a3ce9461-7860-4aae-b6e0-840dc7251407"/> 
+
+### iPhone - Landscape
+
+<img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/23f072d6-2d2c-453f-99b6-5f14f5927f36"/> <img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/285f3ca2-08e8-47df-a2c2-a0fef5c45c40"/> <img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/ee42e713-8aa9-4b28-9434-59433c8dd91a"/> <img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/b4837d8f-9373-4562-a8f7-f52eb40e130a"/> 
+
+### iPad
+
+<img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/00e31aea-0df7-4d05-a65d-4c2d134e18b6"/> <img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/c1cc97b6-69d9-4c9b-8754-de4750783445"/> <img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/3c4604bf-f0af-4dcf-801c-f5939f91e254"/> <img width="600" src="https://github.com/DavidRiveraDEV/MagicTheGathering/assets/88602769/6c014d90-b214-4a03-af68-3d704da4cc6b"/> 
 
 
 
